@@ -23,6 +23,13 @@ class Album
     @artist_id = result[0]['artist_id'].to_i
   end
 
+  def self.all()
+    sql = 'SELECT * FROM albums;'
+    all_albums_array = SqlRunner.run(sql)
+    all_albums = all_albums_array.map {|album| Album.new(album)}
+    return all_albums
+  end
+
   def self.delete_all()
     sql = 'DELETE FROM albums;'
     SqlRunner.run(sql)
