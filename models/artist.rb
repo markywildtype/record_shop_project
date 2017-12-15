@@ -1,3 +1,5 @@
+require_relative('../db/sql_runner.rb')
+
 class Artist
 
   attr_reader :id
@@ -10,7 +12,12 @@ class Artist
   end
 
   def save()
-    
+    sql = 'INSERT INTO artists (name, type)
+    VALUES ($1, $2)
+    RETURNING *;'
+    values = [@name, @type]
+    saved_artist = SqlRunner.run(sql, values)
+    @id = saved_artist[0]['id'].to_i
   end
 
 end
