@@ -19,4 +19,8 @@ class TestArtist < Minitest::Test
     assert_equal('Rachel Sermanni', @artist2.name())
   end
 
+  def test_artist_type()
+    assert_equal('Band', @artist1.type())
+  end
+
 end
