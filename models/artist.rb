@@ -6,7 +6,7 @@ class Artist
   attr_accessor :name, :type
 
   def initialize(options)
-    @id = options['id'].to_i
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
   end
@@ -25,6 +25,15 @@ class Artist
     all_artists_array = SqlRunner.run(sql)
     all_artists = all_artists_array.map {|artist| Artist.new(artist)}
     return all_artists
+  end
+
+  def self.find(id)
+    sql = 'SELECT * FROM artists
+    WHERE id = $1;'
+    values = [id]
+    found_artist_hash = SqlRunner.run(sql, values).first()
+    found_artist = Artist.new(found_artist_hash)
+    return found_artist
   end
 
   def self.delete_all()
