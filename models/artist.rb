@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner.rb')
+require_relative('album.rb')
 
 class Artist
 
@@ -18,6 +19,14 @@ class Artist
     values = [@name, @type]
     saved_artist = SqlRunner.run(sql, values)
     @id = saved_artist[0]['id'].to_i
+  end
+
+  def find_albums()
+    sql = 'SELECT * FROM albums WHERE artist_id = $1'
+    values = [@id]
+    artist_album_array = SqlRunner.run(sql, values)
+    artist_albums = artist_album_array.map {|artist_album| Album.new(artist_album)}
+    return artist_albums
   end
 
   def update()
