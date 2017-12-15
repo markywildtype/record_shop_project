@@ -20,6 +20,14 @@ class Artist
     @id = saved_artist[0]['id'].to_i
   end
 
+  def update()
+    sql = 'UPDATE artists SET (name, type)
+    = ($1, $2)
+    WHERE id = $3;'
+    values = [@name, @type, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def delete()
     sql = "DELETE FROM artists
     WHERE id = $1"
