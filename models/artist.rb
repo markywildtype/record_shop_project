@@ -9,4 +9,8 @@ class Artist
     @type = options['type']
   end
 
+  def save()
+    
+  end
+
 end
