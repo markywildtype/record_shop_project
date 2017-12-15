@@ -31,7 +31,7 @@ class Artist
     sql = 'SELECT * FROM artists
     WHERE id = $1;'
     values = [id]
-    found_artist_hash = SqlRunner.run(sql, values).first()
+    found_artist_array = SqlRunner.run(sql, values).first()
     found_artist = Artist.new(found_artist_hash)
     return found_artist
   end
