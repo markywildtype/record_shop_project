@@ -5,18 +5,18 @@ require_relative('../artist.rb')
 class TestArtist < Minitest::Test
 
   def setup()
-    artist1 = {
+    @artist1 = Artist.new({
       'name' => 'Arcane Roots',
       'type' => 'Band'
-    }
-    artist2 = {
+    })
+    @artist2 = Artist.new ({
       'name' => 'Rachel Sermanni',
       'type' => 'Solo artist'
-    }
+    })
   end
 
   def test_artist_name()
-    assert_equal('Rachel Sermanni', artist2.name())
+    assert_equal('Rachel Sermanni', @artist2.name())
   end
 
 end
