@@ -23,4 +23,9 @@ class TestAlbum < Minitest::Test
     assert_equal('Under Mountains', @album2.title())
   end
 
+  def test_album_stock()
+    assert_equal(15, @album1.stock())
+    assert_equal(10, @album2.stock())
+  end
+
 end
