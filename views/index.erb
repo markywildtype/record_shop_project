@@ -1,0 +1,6 @@
+<h3>All Artists:</h3>
+<% @artists.each do |artist| %>
+<p><%= artist.name %></p>
+
+<p><%= artist.find_albums.map {|album| album.title } %></p>
+<% end  %>
