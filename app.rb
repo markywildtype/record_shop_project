@@ -1,9 +1,8 @@
 require('sinatra')
 require('sinatra/contrib/all')
-require_relative('models/artist.rb')
-require_relative('models/album.rb')
+require_relative('controllers/artists_controller.rb')
+require_relative('controllers/albums_controller.rb')
 
-get('/artists') do
-  @artists = Artist.all()
+get('/') do
   erb(:index)
 end

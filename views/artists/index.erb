@@ -1,0 +1,11 @@
+<h3>All Artists:</h3>
+<% @artists.each do |artist| %>
+<p><%= artist.name %> <a href="/artists/<%= artist.id %>">Details</a></p>
+<p>Albums: </p>
+<% album_array = artist.find_albums %>
+<% for album in album_array %>
+<p><%= album.title %></p>
+<p> - Stock level: <%= album.stock %></p>
+<% end %>
+<hr/>
+<% end  %>
