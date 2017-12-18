@@ -8,6 +8,7 @@ Albums: <%= artist.find_albums.count() %>
 <button type="button" name="album-details"><a href="/artists/<%= artist.id %>/albums">Details</a></button>
 </p>
 <button type="button" name="Add Album"> <a href="/albums/new">Add Album</a> </button>
+<button type="button" name="Edit Artist"> <a href="/artists/<%= artist.id %>/edit">Edit Artist</a> </button>
 <form class="" action="/artists/<%= artist.id() %>/delete" method="POST">
 <input type="submit" name="" value="Delete Artist">
 </form>

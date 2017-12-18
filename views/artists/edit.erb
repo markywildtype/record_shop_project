@@ -1,7 +1,7 @@
 <form action="/artists/<%= @artist.id() %>" method="POST">
 
   <label for="artist-name">Name: </label>
-  <input id="artist-name type="text" name="name" value="<%= @artist.name() %>">
+  <input id="artist-name" type="text" name="name" value="<%= @artist.name() %>">
 
   <label for="artist-type">Artist Type: </label>
   <select id="artist-type" class="" name="type">
