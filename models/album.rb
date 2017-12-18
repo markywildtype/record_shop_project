@@ -25,7 +25,7 @@ class Album
 
   def find_artist()
     sql = "SELECT * FROM artists
-    WHERE id = $1"
+    WHERE id = $1;"
     values = [@artist_id]
     album_artist_array = SqlRunner.run(sql, values)
     return album_artist_array[0]
