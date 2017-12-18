@@ -22,7 +22,7 @@ class Artist
   end
 
   def find_albums()
-    sql = 'SELECT * FROM albums WHERE artist_id = $1'
+    sql = 'SELECT * FROM albums WHERE artist_id = $1 ORDER BY release_date'
     values = [@id]
     artist_album_array = SqlRunner.run(sql, values)
     artist_albums = artist_album_array.map {|artist_album| Album.new(artist_album)}
