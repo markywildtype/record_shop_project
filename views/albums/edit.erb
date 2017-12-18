@@ -1,15 +1,6 @@
 <form action="/albums/<%= @album.id %>" method="POST">
 
 <h3>Edit Album Details</h3>
-<!--
-  <label for="artist-name">Artist</label>
-  <select id="artist-name" class="" name="name">
-    <% for artist in @artists %>
-    <% if artist.name == @album.find_artist()['name'] %>
-    <option value= <%= artist.name %> selected><%= artist.name() %></option>
-    <% end %>
-    <% end %>
-  </select> -->
 
   <label for="artist-name">Artist Name: </label>
   <input id="artist-name" type="text" name="title" value="<%= @album.find_artist()['name'] %>">

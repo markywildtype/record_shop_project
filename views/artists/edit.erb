@@ -1,18 +1,21 @@
 <form action="/artists/<%= @artist.id() %>" method="POST">
 
+<h3>Edit Artist Details</h3>
+
   <label for="artist-name">Name: </label>
   <input id="artist-name" type="text" name="name" value="<%= @artist.name() %>">
 
   <label for="artist-type">Artist Type: </label>
-  <select id="artist-type" class="" name="type">
-
-    <% if @artist.type() == 'Band' %>
+  <select id="artist-type" name="type">
+    <% if @artist.type == 'Band' %>
     <option value="Band" selected>Band</option>
-
-    <% elsif @artist.type() == 'Solo artist' || 'Solo Artist'%>
-    <option value="Solo artist" selected>Solo artist</option>
+    <option value="Solo Artist">Solo Artist</option>
+    <% else %>
+    <option value="Solo Artist" selected>Solo Artist</option>
+    <option value="Band">Band</option>
     <% end %>
   </select>
+
 
   <input class="form_button" type="submit" value="Save Changes">
 
