@@ -1,10 +1,10 @@
-
+<h3>Albums by <%= @artist.name %>:</h3>
 <% album_array = @artist.find_albums %>
 <% for album in album_array %>
-<p>Artist: <%= @artist.name %> </p>
 <p>Title: <%= album.title %></p>
 <p>Release Date: <%= album.release_date %></p>
 <p>Stock level: <%= album.stock %></p>
+<button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button>
 <hr/>
 <% end %>
 <p><a href="/artists">Back</a></p>
