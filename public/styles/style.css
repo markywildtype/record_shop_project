@@ -4,13 +4,23 @@
 }
 
 body {
-
+  /*background-image: url('/images/records.png');
+  background-size: contain;*/
 }
 
 header {
+  display: flex;
+  align-items: center;
   background-color: black;
+  background-image: url('/images/records.png');
+  background-size: cover;
+  height: 100px;
   color: white;
   padding: 10px;
+}
+
+header h1 {
+  margin-left: 100px;
 }
 
 footer {
@@ -20,14 +30,22 @@ footer {
   padding: 20px;
 }
 
+h3 {
+  margin: 5px;
+}
+
 #container {
   width: 90%;
-  height: 800px;
+  height: 700px;
   display: flex;
 }
 
-#artists-container {
+.lists_container {
   padding: 10px;
+}
+
+.lists_container p, button, h3, form {
+  margin-bottom: 10px;
 }
 
 main {

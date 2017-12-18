@@ -1,3 +1,4 @@
+<div class="lists_container">
 <h3>Albums by <%= @artist.name %>:</h3>
 <% album_array = @artist.find_albums %>
 <% for album in album_array %>
@@ -8,3 +9,4 @@
 <hr/>
 <% end %>
 <p><a href="/artists">Back</a></p>
+</div>

@@ -5,30 +5,32 @@
 <hr/>
 
 <table>
-  <th>Artist</th>
-  <th>Album</th>
-  <th>Stock Level</th>
-  <th colspan="3">Actions</th>
-  <% @albums.each do |album| %>
-  <% artist_hash = album.find_artist %>
+  <tr>
+    <th>Artist</th>
+    <th>Album</th>
+    <th>Stock Level</th>
+    <th colspan="3">Actions</th>
+    <% @albums.each do |album| %>
+    <% artist_hash = album.find_artist %>
+  </tr>
   <tr>
     <td><%= artist_hash['name'] %></td>
     <td><%= album.title %></td>
     <td>
       <% if album.stock <= 5 %>
-        <p id="low">Low</p>
+      <p id="low">Low</p>
       <% elsif album.stock <= 10%>
-        <p id="medium">Medium</p>
+      <p id="medium">Medium</p>
       <% else %>
-        <p id="high">High</p>
+      <p id="high">High</p>
       <% end %>
 
       <p></td>
-    <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
-    <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
-    <td> <form class="" action="/albums/<%= album.id %>/delete" method="POST">
-      <input type="submit" name="" value="Delete Album">
-    </form> </td>
-  </tr>
-  <% end %>
-</table>
+        <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
+        <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
+        <td> <form class="" action="/albums/<%= album.id %>/delete" method="POST">
+          <input class="form_button" type="submit" name="" value="Delete Album">
+        </form> </td>
+      </tr>
+      <% end %>
+    </table>

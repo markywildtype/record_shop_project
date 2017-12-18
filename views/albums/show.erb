@@ -1,10 +1,12 @@
 <h3>Album Details:</h3>
+<div class="lists_container">
 <p>Album: <%= @album.title %>
 <p>Artist: <%= @album.find_artist['name'] %></p>
 <p>Release Date: <%= @album.release_date %></p>
 <p>Stock: <%= @album.stock %></p>
 <button type="button" name="edit-album"> <a href="/albums/<%= @album.id %>/edit">Edit Album</a> </button>
-<p> <a href="/albums">Back</a> </p>
 <form class="" action="/albums/<%= @album.id() %>/delete" method="POST">
-  <input type="submit" name="" value="Delete Album">
+  <input class="form_button" type="submit" name="" value="Delete Album">
 </form>
+<p><a href="/albums">Back</a> </p>
+</div>
