@@ -8,6 +8,10 @@ get('/albums') do
   erb(:"albums/index")
 end
 
+get('/albums/new') do
+  erb(:"albums/new")
+end
+
 get('/albums/:id') do
   @album = Album.find(params['id'])
   erb(:"albums/show")
