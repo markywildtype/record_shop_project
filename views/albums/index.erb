@@ -8,8 +8,7 @@
   <th>Artist</th>
   <th>Album</th>
   <th>Stock Level</th>
-  <th></th>
-  <th></th>
+  <th colspan="3">Actions</th>
   <% @albums.each do |album| %>
   <% artist_hash = album.find_artist %>
   <tr>
@@ -27,6 +26,9 @@
       <p></td>
     <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
     <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
+    <td> <form class="" action="/albums/<%= album.id %>/delete" method="POST">
+      <input type="submit" name="" value="Delete Album">
+    </form> </td>
   </tr>
   <% end %>
 </table>
