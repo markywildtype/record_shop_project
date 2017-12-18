@@ -12,7 +12,16 @@
   <tr>
     <td><%= artist_hash['name'] %></td>
     <td><%= album.title %></td>
-    <td>**PlaceHolder**</td>
+    <td>
+      <% if album.stock <= 5 %>
+        <p id="low">Low</p>
+      <% elsif album.stock <= 10%>
+        <p id="medium">Medium</p>
+      <% else %>
+        <p id="high">High</p>
+      <% end %>
+
+      <p></td>
     <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
   </tr>
   <% end %>
