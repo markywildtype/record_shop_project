@@ -2,18 +2,28 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/styles/style.css?version=2">
+  <link rel="stylesheet" href="/styles/style.css?version=3">
+  <link rel="stylesheet" href="/styles/nav.css?version=3">
   <title>Warmer Sounds</title>
 </head>
 <body>
+<header>
   <h1>Warmer Sounds: Stock Checker</h1>
-  <nav>
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/artists">Artists</a></li>
-      <li><a href="/albums">Albums</a></li>
-    </ul>
-  </nav>
-  <%= yield %>
+</header>
+  <div id="container">
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/artists">Artists</a></li>
+        <li><a href="/albums">Albums</a></li>
+      </ul>
+    </nav>
+    <main>
+      <%= yield %>
+    </main>
+  </div>
+  <footer>
+    <h5>Site poorly designed by Mark Blanford, 2017</h5>
+  </footer>
 </body>
 </html>

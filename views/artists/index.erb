@@ -1,8 +1,10 @@
 <button type="button" name="Add New Artist"><a href="/artists/new">Add new artist</a></button>
-
 <h3>All Artists:</h3>
 
 <% @artists.each do |artist| %>
+
+
+<div id="artists-container"
 <p><%= artist.name %> <button type="button" name="artist-details"><a href="/artists/<%= artist.id %>">Details</a></button>
 Albums: <%= artist.find_albums.count() %>
 <button type="button" name="album-details"><a href="/artists/<%= artist.id %>/albums">Details</a></button>
@@ -12,6 +14,7 @@ Albums: <%= artist.find_albums.count() %>
 <form class="" action="/artists/<%= artist.id() %>/delete" method="POST">
 <input type="submit" name="" value="Delete Artist">
 </form>
+</div>
 
 <hr/>
 <% end  %>

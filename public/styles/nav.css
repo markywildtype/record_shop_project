@@ -1,0 +1,14 @@
+nav {
+  width: 10%;
+  background-color: gray;
+  padding: 10px;
+}
+
+nav ul {
+  display: block;
+  text-align: center;
+}
+
+nav ul li {
+  padding: 10px;
+}
