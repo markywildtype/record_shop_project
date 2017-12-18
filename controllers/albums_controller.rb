@@ -34,3 +34,9 @@ post('/albums/:id') do
   album.update()
   redirect to "/albums/#{params['id']}"
 end
+
+post('/albums/:id/delete') do
+  artist = Album.find(params['id'])
+  artist.delete()
+  redirect to "/albums"
+end
