@@ -1,0 +1,19 @@
+<form class="" action="/albums" method="POST">
+
+  <label for="artist-name">Artist: </label>
+  <select id="artist-name" class="" name="artist_id">
+    <% for artist in @artists %>
+    <option value=""><%= artist.name %></option>
+    <% end %>
+  </select>
+
+  <label for="album-title">Album Title: </label>
+  <input id="album-title" type="text" name="title">
+
+  <label for="release-date">Release Date (YYYY-MM-DD): </label>
+  <input id="release-date" type="text" name="release_date">
+
+  <label for="stock-level">Stock: </label>
+  <input id="stock-level" type="text" name="stock">
+
+</form>
