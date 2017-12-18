@@ -37,3 +37,9 @@ get('/artists/:id/albums') do
   @artist = Artist.find(params['id'])
   erb(:"artists/show_album")
 end
+
+post('/artists/:id/delete') do
+  artist = Artist.find(params['id'])
+  artist.delete()
+  redirect to "/artists"
+end
