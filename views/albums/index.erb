@@ -9,6 +9,7 @@
   <th>Album</th>
   <th>Stock Level</th>
   <th></th>
+  <th></th>
   <% @albums.each do |album| %>
   <% artist_hash = album.find_artist %>
   <tr>
@@ -25,6 +26,7 @@
 
       <p></td>
     <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
+    <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
   </tr>
   <% end %>
 </table>
