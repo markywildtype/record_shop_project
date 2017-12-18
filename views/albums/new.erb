@@ -1,9 +1,9 @@
 <form class="" action="/albums" method="POST">
 
   <label for="artist-name">Artist: </label>
-  <select id="artist-name" class="" name="artist_id">
+  <select id="artist-name" name="artist_id">
     <% for artist in @artists %>
-    <option value=""><%= artist.name %></option>
+    <option value= <%= artist.id() %> ><%= artist.name() %></option>
     <% end %>
   </select>
 
@@ -15,5 +15,7 @@
 
   <label for="stock-level">Stock: </label>
   <input id="stock-level" type="text" name="stock">
+
+  <input type="submit" value="Add Album">
 
 </form>

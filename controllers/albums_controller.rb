@@ -13,6 +13,11 @@ get('/albums/new') do
   erb(:"albums/new")
 end
 
+post('/albums') do
+  Album.new(params).save()
+  redirect to '/albums'
+end
+
 get('/albums/:id') do
   @album = Album.find(params['id'])
   erb(:"albums/show")

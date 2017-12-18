@@ -22,6 +22,12 @@ get('/artists/:id') do
   erb(:"artists/show")
 end
 
+get('/artists/:id/edit') do
+  @artist = Artist.find(params['id'])
+  erb(:"artists/edit")
+end
+
+
 get('/artists/:id/albums') do
   @artist = Artist.find(params['id'])
   erb(:"artists/show_album")
