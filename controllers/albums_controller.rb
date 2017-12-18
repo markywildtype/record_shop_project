@@ -36,7 +36,7 @@ post('/albums/:id') do
 end
 
 post('/albums/:id/delete') do
-  artist = Album.find(params['id'])
-  artist.delete()
+  album = Album.find(params['id'])
+  album.delete()
   redirect to "/albums"
 end
