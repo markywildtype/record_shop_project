@@ -17,7 +17,7 @@ artist2 = Artist.new({
 
 artist3 = Artist.new({
   'name' => 'Rachel Sermanni',
-  'type' => 'Solo artist'
+  'type' => 'Solo Artist'
   })
 
 artist4 = Artist.new({

@@ -5,8 +5,13 @@
 
   <label for="artist-type">Artist Type: </label>
   <select id="artist-type" class="" name="type">
-    <option value="Band">Band</option>
-    <option value="Solo artist">Solo artist</option>
+
+    <% if @artist.type() == 'Band' %>
+    <option value="Band" selected>Band</option>
+
+    <% elsif @artist.type() == 'Solo artist' || 'Solo Artist'%>
+    <option value="Solo artist" selected>Solo artist</option>
+    <% end %>
   </select>
 
   <input type="submit" value="Save Changes">
