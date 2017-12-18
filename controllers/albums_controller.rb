@@ -22,3 +22,15 @@ get('/albums/:id') do
   @album = Album.find(params['id'])
   erb(:"albums/show")
 end
+
+get('/albums/:id/edit') do
+  @album = Album.find(params['id'])
+  @artists = Artist.all()
+  erb(:"albums/edit")
+end
+
+post('/albums/:id') do
+  album = Album.new(params)
+  album.update()
+  redirect to "/albums/#{params['id']}"
+end

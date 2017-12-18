@@ -1,0 +1,25 @@
+<form action="/albums/<%= @album.id %>" method="POST">
+
+<h3>Edit Album Details</h3>
+
+  <label for="artist-name">Artist</label>
+  <select id="artist-name" class="" name="name">
+    <% for artist in @artists %>
+    <% if artist.name == @album.find_artist()['name'] %>
+    <option value= <%= artist.name %> selected><%= artist.name() %></option>
+    <% end %>
+    <% end %>
+  </select>
+
+  <label for="album-title">Album Title: </label>
+  <input id="album-title" type="text" name="title" value=<%= @album.title() %>>
+
+  <label for="album-release-date">Release Date: </label>
+  <input id="album-release-date" type="text" name="release_date" value=<%= @album.release_date() %>>
+
+  <label for="album-stock">Stock: </label>
+  <input type="number" name="stock" min="0" value=<%= @album.stock() %>>
+
+  <input type="submit" name="" value="Save Changes">
+
+</form>
