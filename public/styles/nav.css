@@ -23,7 +23,6 @@ nav a {
 }
 
 nav a:hover {
-  /*background-color: blue;*/
-  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-width: 0.2px;
   -webkit-text-stroke-color: red;
 }
