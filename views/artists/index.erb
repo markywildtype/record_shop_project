@@ -1,4 +1,7 @@
+<button type="button" name="Add New Artist"><a href="/artists/new">Add new artist</a></button>
+
 <h3>All Artists:</h3>
+
 <% @artists.each do |artist| %>
 <p><%= artist.name %> <a href="/artists/<%= artist.id %>">Details</a></p>
 <p>Albums: <%= artist.find_albums.count() %> <a href="/artists/<%= artist.id %>/albums">Details</a></p>

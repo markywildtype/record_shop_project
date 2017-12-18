@@ -1,11 +1,19 @@
 <h3>All Albums:</h3>
-<p>Here's a list of all albums!</p>
-<hr/>
-<% @albums.each do |album| %>
-<% artist_hash = album.find_artist %>
-<p><%= artist_hash['name'] %> - <%= album.title %></p>
-<p>Stock: </p>
-<p><a href="/albums/<%= album.id %>">Details</a></p>
+
 <hr/>
 
-<% end %>
+<table>
+  <th>Artist</th>
+  <th>Album</th>
+  <th>Stock Level</th>
+  <th></th>
+  <% @albums.each do |album| %>
+  <% artist_hash = album.find_artist %>
+  <tr>
+    <td><%= artist_hash['name'] %></td>
+    <td><%= album.title %></td>
+    <td>**PlaceHolder**</td>
+    <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
+  </tr>
+  <% end %>
+</table>
