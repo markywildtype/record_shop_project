@@ -1,6 +1,6 @@
 
 <% album_array = @artist.find_albums %>
 <% for album in album_array %>
-<p><%= album.title %></p>
-<p> - Stock level: <%= album.stock %></p>
+<p>Title: <%= album.title %></p>
+<p>Stock level: <%= album.stock %></p>
 <% end %>
