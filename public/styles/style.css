@@ -51,9 +51,9 @@ h3 {
   display: flex;
 }
 
-.lists_container {
+/*.lists_container {
   padding: 10px;
-}
+}*/
 
 .lists_container p, button, h3, form {
   margin-bottom: 10px;
