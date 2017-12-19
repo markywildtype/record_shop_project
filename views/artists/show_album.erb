@@ -1,19 +1,33 @@
 <div class="lists_container">
 <h3>Albums by <%= @artist.name %>:</h3>
+<hr/>
 <% album_array = @artist.find_albums %>
 <% for album in album_array %>
-<p>Title: <%= album.title %></p>
-<p>Release Date: <%= album.release_date %></p>
-<p>Stock level: <%= album.stock %></p>
+<table id="artist_album_table">
+  <tr>
+    <td rowspan="4"><img id="artist_album" src="<%= album.album_cover() %>" alt="<%= album.title() %>"></td><td colspan="3">Title: <%= album.title %></td>
+  </tr>
+  <tr>
+    <td colspan="3">Release Date: <%= album.release_date %></td>
+  </tr>
+  <tr>
+    <td colspan="3">Stock level: <%= album.stock %></td>
+  </tr>
+  <tr>
+    <td>  <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
+    <td><form class="" action="/albums/<%= album.id %>/delete" method="POST">
+      <input class="form_button" type="submit" name="" value="Delete Album">
+    </form></td>
+    <td></td>
+  </tr>
+</table>
+  <hr/>
+  <% end %>
 
-  <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button>
-  <form class="" action="/albums/<%= album.id %>/delete" method="POST">
-    <input class="form_button" type="submit" name="" value="Delete Album">
-  </form>
 
-<hr/>
 
-<% end %>
+
+
 <p> <a href="/artists/<%= @artist.id %>">Back to <%= @artist.name() %></a> </p>
 <p><a href="/artists">Back to Artists</a></p>
 </div>

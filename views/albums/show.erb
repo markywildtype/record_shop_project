@@ -1,5 +1,6 @@
 <h3>Album Details:</h3>
 <div class="lists_container">
+<img src="<%= @album.album_cover() %>" alt="<%= @album.title %>">
 <p>Artist: <%= @album.find_artist['name'] %></p>
 <p>Album: <%= @album.title %>
 <p>Release Date: <%= @album.release_date %></p>

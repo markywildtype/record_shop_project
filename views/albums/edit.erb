@@ -22,6 +22,9 @@
   <label for="album-stock">Stock: </label>
   <input type="number" name="stock" min="0" value=<%= @album.stock() %>>
 
+  <label for="album-cover">Album Cover URL:</label>
+  <input id="album-cover" type="text" name="album_cover" value="<%= @album.album_cover() %>">
+
   <input class="form_button" type="submit" name="" value="Save Changes">
 
 </form>

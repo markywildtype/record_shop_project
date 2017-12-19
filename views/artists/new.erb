@@ -1,16 +1,22 @@
 <form action="/artists" method="POST">
 
-<label for="artist-name-input">Artist Name: </label>
-<input id="artist-name-input" type="text" name="name" value="">
+  <label for="artist-name-input">Artist Name: </label>
+  <input id="artist-name-input" type="text" name="name" value="">
 
-<label for="artist-type">Artist Type: </label>
-<select class="" name="type" id="artist-type">
-   <option value="Band">Band</option>
-   <option value="Solo Artist">Solo Artist</option>
-   <option value="DJ/Producer">DJ/Producer</option>
-   <option value="Composer">Composer</option>
-</select>
+  <label for="artist-type">Artist Type: </label>
+  <select class="" name="type" id="artist-type">
+    <option value="Band">Band</option>
+    <option value="Solo Artist">Solo Artist</option>
+    <option value="DJ/Producer">DJ/Producer</option>
+    <option value="Composer">Composer</option>
+  </select>
 
-<input class="form_button" type="submit" value="Add Artist">
+  <label for="artist-photo">Photo URL: </label>
+  <input id="artist-photo" type="text" name="photo">
+
+  <label for="artist-link">Link URL: </label>
+  <input id="artist-link" type="text" name="link">
+
+  <input class="form_button" type="submit" value="Add Artist">
 
 </form>

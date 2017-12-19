@@ -42,42 +42,48 @@ album1 = Album.new({
   'artist_id' => artist1.id(),
   'title' => 'Melancholia Hymns',
   'release_date' => '2017-09-15',
-  'stock' => 15
+  'stock' => 15,
+  'album_cover' => 'http://bit.ly/2oIlAyw'
   })
 
 album2 = Album.new({
   'artist_id' => artist1.id(),
   'title' => 'Blood and Chemistry',
   'release_date' => '2013-05-06',
-  'stock' => 10
+  'stock' => 10,
+  'album_cover' => 'http://bit.ly/2CCncw3'
   })
 
 album3 = Album.new({
   'artist_id' => artist2.id(),
   'title' => 'Statues',
   'release_date' => '2016-04-08',
-  'stock' => 12
+  'stock' => 12,
+  'album_cover' => 'http://bit.ly/2D5pnJu'
   })
 
 album4 = Album.new({
   'artist_id' => artist3.id(),
   'title' => 'Under Mountains',
   'release_date' => '2012-09-12',
-  'stock' => 5
+  'stock' => 5,
+  'album_cover' => 'http://bit.ly/2AY3JW1'
   })
 
 album5 = Album.new({
   'artist_id' => artist3.id(),
   'title' => 'Tied to the Moon',
   'release_date' => '2015-07-10',
-  'stock' => 8
+  'stock' => 8,
+  'album_cover' => 'http://bit.ly/2D3XpxP'
   })
 
 album6 = Album.new({
   'artist_id' => artist4.id(),
   'title' => 'Masterpiece',
   'release_date' => '2016-05-27',
-  'stock' => 2
+  'stock' => 2,
+  'album_cover' => 'http://bit.ly/2BLTFmQ'
   })
 
 album1.save()

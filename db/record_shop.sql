@@ -14,5 +14,6 @@ CREATE TABLE albums (
   artist_id SERIAL8 REFERENCES artists(id) ON DELETE CASCADE,
   title VARCHAR(255),
   release_date DATE,
-  stock INT4
+  stock INT4,
+  album_cover VARCHAR(255) 
 );

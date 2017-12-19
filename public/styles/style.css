@@ -105,6 +105,10 @@ table {
   margin-top: -18px;
 }
 
+#artist_album_table {
+  text-align: left;
+}
+
 #inventory {
   text-align: center;
   margin-bottom: 0;
@@ -121,6 +125,10 @@ img {
   width: 300px;
 }
 
+#artist_album {
+  width: 150px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -134,4 +142,9 @@ a:hover {
 button a {
   color: black;
   text-decoration: none;
+}
+
+hr {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }

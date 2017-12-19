@@ -14,10 +14,10 @@
   </select>
 
   <label for="artist-photo">Photo URL:</label>
-  <input type="text" name="photo" value="<%= @artist.photo() %>">
+  <input id="artist-photo" type="text" name="photo" value="<%= @artist.photo() %>">
 
-  <label for="artist-link">Link:</label>
-  <input type="text" name="link" value="<%= @artist.link %>">
+  <label for="artist-link">Link URL:</label>
+  <input id="artist-link" type="text" name="link" value="<%= @artist.link %>">
 
   <input class="form_button" type="submit" value="Save Changes">
 
