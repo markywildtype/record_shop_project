@@ -3,7 +3,7 @@ require_relative('artist.rb')
 
 class Album
 
-  attr_reader :id
+  attr_reader :id, :artist_id
   attr_accessor :title, :release_date, :stock
 
   def initialize(options)
