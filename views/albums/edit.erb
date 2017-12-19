@@ -3,7 +3,12 @@
 <h3>Edit Album Details</h3>
 
   <label for="artist-name">Artist Name: </label>
-  <input id="artist-name" type="text" name="title" value="<%= @album.find_artist()['name'] %>">
+  <select id="artist-name" name="artist_id">
+    <% for artist in @artists %>
+    <option value= <%= artist.id() %> ><%= artist.name() %></option>
+    <% end %>
+  </select>
+
 
   <label for="album-title">Album Title: </label>
   <input id="album-title" type="text" name="title" value="<%= @album.title() %>">

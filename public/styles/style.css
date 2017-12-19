@@ -58,6 +58,10 @@ main {
   padding: 20px;
 }
 
+th {
+  font-size: 1.2rem;
+}
+
 th, td {
   padding: 10px;
 }
@@ -86,6 +90,14 @@ select {
 
 table {
   text-align: center;
+  margin-bottom: -20px;
+  margin-top: -18px;
+}
+
+#inventory {
+  text-align: center;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 ul {

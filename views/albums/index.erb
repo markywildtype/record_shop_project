@@ -4,7 +4,7 @@
 
 <hr/>
 
-<table>
+<table id="inventory">
   <tr>
     <th>Artist</th>
     <th>Album</th>
@@ -27,7 +27,7 @@
 
       <p></td>
         <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
-        <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
+        <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Update</a></button></td>
         <td> <form class="" action="/albums/<%= album.id %>/delete" method="POST">
           <input class="form_button" type="submit" name="" value="Delete Album">
         </form> </td>

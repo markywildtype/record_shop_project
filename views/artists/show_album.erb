@@ -6,13 +6,13 @@
 <p>Release Date: <%= album.release_date %></p>
 <p>Stock level: <%= album.stock %></p>
 
-
-<button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button>
-<form class="" action="/albums/<%= album.id %>/delete" method="POST">
-  <input class="form_button" type="submit" name="" value="Delete Album">
-</form>
+  <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button>
+  <form class="" action="/albums/<%= album.id %>/delete" method="POST">
+    <input class="form_button" type="submit" name="" value="Delete Album">
+  </form>
 
 <hr/>
+
 <% end %>
 <p><a href="/artists">Back</a></p>
 </div>

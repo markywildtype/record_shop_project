@@ -47,7 +47,10 @@ class Album
   end
 
   def self.all()
-    sql = 'SELECT * FROM albums;'
+    sql = 'SELECT albums.*, artists.name FROM albums
+    INNER JOIN artists
+    ON artists.id = albums.artist_id
+    ORDER BY artists.name;'
     all_albums_array = SqlRunner.run(sql)
     all_albums = all_albums_array.map {|album| Album.new(album)}
     return all_albums
