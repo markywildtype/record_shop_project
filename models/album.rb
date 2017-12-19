@@ -3,7 +3,7 @@ require_relative('artist.rb')
 
 class Album
 
-  attr_reader :id, :artist_id
+  attr_reader :id, :artist_id, :unit_price
   attr_accessor :title, :release_date, :stock, :album_cover
 
   def initialize(options)
@@ -11,15 +11,16 @@ class Album
     @artist_id = options['artist_id'].to_i
     @title = options['title']
     @release_date = options['release_date']
+    @unit_price = options['unit_price'].to_f
     @stock = options['stock'].to_i
     @album_cover = options['album_cover']
   end
 
   def save()
-    sql = 'INSERT INTO albums (artist_id, title, release_date, stock, album_cover)
-    VALUES ($1, $2, $3, $4, $5)
+    sql = 'INSERT INTO albums (artist_id, title, release_date, unit_price, stock, album_cover)
+    VALUES ($1, $2, $3, $4, $5, $6)
     RETURNING *;'
-    values = [@artist_id, @title, @release_date, @stock, @album_cover]
+    values = [@artist_id, @title, @release_date, @unit_price, @stock, @album_cover]
     result = SqlRunner.run(sql, values)
     @id = result[0]['id'].to_i
   end

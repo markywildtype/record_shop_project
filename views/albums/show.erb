@@ -3,7 +3,8 @@
 <img src="<%= @album.album_cover() %>" alt="<%= @album.title %>">
 <p>Artist: <%= @album.find_artist['name'] %></p>
 <p>Album: <%= @album.title %>
-<p>Release Date: <%= @album.release_date %></p>
+<p>Release Date: <%= @album.release_date() %></p>
+<p>Unit Price: £<%= @album.unit_price() %></p>
 <p>Stock: <%= @album.stock %></p>
 <button type="button" name="edit-album"> <a href="/albums/<%= @album.id %>/edit">Edit Album</a> </button>
 <form class="" action="/albums/<%= @album.id() %>/delete" method="POST">
