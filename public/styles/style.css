@@ -103,6 +103,11 @@ table {
 
 #artist_album_table {
   text-align: left;
+  margin: 0px;
+}
+
+#artist_album_table td {
+  padding: 5px;
 }
 
 #inventory {

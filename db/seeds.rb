@@ -42,7 +42,7 @@ album1 = Album.new({
   'artist_id' => artist1.id(),
   'title' => 'Melancholia Hymns',
   'release_date' => '2017-09-15',
-  'unit_price' => 8.5,
+  'unit_price' => 8.50,
   'stock' => 15,
   'album_cover' => 'http://bit.ly/2oIlAyw'
   })
@@ -51,7 +51,7 @@ album2 = Album.new({
   'artist_id' => artist1.id(),
   'title' => 'Blood and Chemistry',
   'release_date' => '2013-05-06',
-  'unit_price' => 8.5,
+  'unit_price' => 8.50,
   'stock' => 10,
   'album_cover' => 'http://bit.ly/2CCncw3'
   })
@@ -60,7 +60,7 @@ album3 = Album.new({
   'artist_id' => artist2.id(),
   'title' => 'Statues',
   'release_date' => '2016-04-08',
-  'unit_price' => 7.5,
+  'unit_price' => 7.50,
   'stock' => 12,
   'album_cover' => 'http://bit.ly/2D5pnJu'
   })

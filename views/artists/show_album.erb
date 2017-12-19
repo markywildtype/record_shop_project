@@ -5,13 +5,16 @@
 <% for album in album_array %>
 <table id="artist_album_table">
   <tr>
-    <td rowspan="4"><img id="artist_album" src="<%= album.album_cover() %>" alt="<%= album.title() %>"></td><td colspan="3">Title: <%= album.title %></td>
+    <td rowspan="5"><img id="artist_album" src="<%= album.album_cover() %>" alt="<%= album.title() %>"></td><td colspan="3">Title: <%= album.title %></td>
   </tr>
   <tr>
     <td colspan="3">Release Date: <%= album.release_date %></td>
   </tr>
   <tr>
     <td colspan="3">Stock level: <%= album.stock %></td>
+  </tr>
+  <tr>
+    <td colspan="3">Unit Price: £<%= album.unit_price %></td>
   </tr>
   <tr>
     <td>  <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
