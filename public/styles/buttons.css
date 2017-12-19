@@ -11,6 +11,10 @@ button:hover {
   box-shadow: 0.5px 0.5px gray;
 }
 
+button a:hover {
+  -webkit-text-stroke-width: 0px;
+}
+
 .form_button {
   padding: 2px;
   margin: 2px;

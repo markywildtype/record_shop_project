@@ -1,12 +1,13 @@
 nav {
   width: 10%;
   min-width: 100px;
-  background-color: gray;
+  background-color: white;
   padding: 10px;
 }
 
 nav ul {
-  margin-top: 30px;
+  list-style: none;
+  margin-top: 10px;
   display: block;
   text-align: center;
 }
@@ -20,10 +21,10 @@ nav ul li {
 }
 
 nav a {
-  color: white;
+  color: black;
 }
 
 nav a:hover {
-  -webkit-text-stroke-width: 0.2px;
+  -webkit-text-stroke-width: 0.4px;
   -webkit-text-stroke-color: red;
 }
