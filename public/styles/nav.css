@@ -1,5 +1,6 @@
 nav {
   width: 10%;
+  min-width: 100px;
   background-color: gray;
   padding: 10px;
 }
