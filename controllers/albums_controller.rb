@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
+require_relative('../models/type.rb')
 
 get('/albums') do
   @albums = Album.all()
@@ -26,6 +27,7 @@ end
 get('/albums/:id/edit') do
   @album = Album.find(params['id'])
   @artists = Artist.all()
+  @types = Type.all()
   erb(:"albums/edit")
 end
 

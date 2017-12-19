@@ -10,9 +10,23 @@
     <% if @artist.type == 'Band' %>
     <option value="Band" selected>Band</option>
     <option value="Solo Artist">Solo Artist</option>
-    <% else %>
-    <option value="Solo Artist" selected>Solo Artist</option>
+    <option value="DJ/Producer">DJ/Producer</option>
+    <option value="Composer">Composer</option>
+    <% elsif @artist.type == 'Solo Artist' %>
     <option value="Band">Band</option>
+    <option value="Solo Artist" selected>Solo Artist</option>
+    <option value="DJ/Producer">DJ/Producer</option>
+    <option value="Composer">Composer</option>
+    <% elsif @artist.type == 'DJ/Producer' %>
+    <option value="Band">Band</option>
+    <option value="Solo Artist">Solo Artist</option>
+    <option value="DJ/Producer" selected>DJ/Producer</option>
+    <option value="Composer">Composer</option>
+    <% elsif @artist.type == 'Composer' %>
+    <option value="Band">Band</option>
+    <option value="Solo Artist">Solo Artist</option>
+    <option value="DJ/Producer">DJ/Producer</option>
+    <option value="Composer" selected>Composer</option>
     <% end %>
   </select>
 
