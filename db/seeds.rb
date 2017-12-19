@@ -7,22 +7,30 @@ Artist.delete_all()
 
 artist1 = Artist.new({
   'name' => 'Arcane Roots',
-  'type' => 'Band'
+  'type' => 'Band',
+  'photo' => 'http://bit.ly/2CFjTUQ',
+  'link' => 'https://arcaneroots.com/'
   })
 
 artist2 = Artist.new({
   'name' => 'Black Peaks',
-  'type' => 'Band'
+  'type' => 'Band',
+  'photo' => 'http://bit.ly/2BfqR6V',
+  'link' => 'http://www.blackpeaks.com/'
   })
 
 artist3 = Artist.new({
   'name' => 'Rachel Sermanni',
-  'type' => 'Solo Artist'
+  'type' => 'Solo Artist',
+  'photo' => 'http://bit.ly/2kjRCfA',
+  'link' => 'http://rachelsermanni.co.uk/'
   })
 
 artist4 = Artist.new({
   'name' => 'Big Thief',
-  'type' => 'Band'
+  'type' => 'Band',
+  'photo' => 'http://bit.ly/2yWQFi7',
+  'link' => 'http://www.bigthief.net/'
   })
 
 artist1.save()

@@ -5,8 +5,10 @@
 
 body {
   font-family: 'Merriweather Sans', sans-serif;
-  /*background-image: url('/images/records.png');
-  background-size: contain;*/
+  background-color: #fff8d1;
+  /*background-image: url('http://bit.ly/2AYSw7A');*/
+  background-color: rgba(255, 255, 235, 0.8);
+  background-size: cover;
 }
 
 header {
@@ -15,25 +17,28 @@ header {
   background-color: black;
   background-image: url('/images/records.png');
   background-size: cover;
-  height: 100px;
+  min-height: 100px;
   min-width: 600px;
   color: white;
   padding: 10px;
 }
 
 header h1 {
-  font-size: 4rem;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem;
   margin-left: 100px;
   -webkit-text-stroke-width: 0.2px;
-  -webkit-text-stroke-color: blue;
+  -webkit-text-stroke-color: orange;
   text-shadow: 2px 2px black;
 }
 
 footer {
-  background-color: black;
+  background-image: url('/images/records.png');
+  background-size: cover;
   color: white;
   text-align: center;
   padding: 20px;
+  text-shadow: 2px 2px black;
 }
 
 h3 {
@@ -72,6 +77,11 @@ form input, label {
   margin: 8px;
 }
 
+/*form input {
+  padding:2px;
+  font-size: 0.8rem;
+}*/
+
 select {
   margin-left: 10px;
   margin-bottom: 10px;
@@ -107,6 +117,10 @@ table {
   margin-left: 20px;
 }
 
+img {
+  width: 300px;
+}
+
 a {
   text-decoration: none;
   color: black;
@@ -114,7 +128,7 @@ a {
 
 a:hover {
 -webkit-text-stroke-width: 0.4px;
--webkit-text-stroke-color: red;
+-webkit-text-stroke-color: orange;
 }
 
 button a {

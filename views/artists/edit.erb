@@ -7,29 +7,17 @@
 
   <label for="artist-type">Artist Type: </label>
   <select id="artist-type" name="type">
-    <% if @artist.type == 'Band' %>
-    <option value="Band" selected>Band</option>
-    <option value="Solo Artist">Solo Artist</option>
-    <option value="DJ/Producer">DJ/Producer</option>
-    <option value="Composer">Composer</option>
-    <% elsif @artist.type == 'Solo Artist' %>
-    <option value="Band">Band</option>
-    <option value="Solo Artist" selected>Solo Artist</option>
-    <option value="DJ/Producer">DJ/Producer</option>
-    <option value="Composer">Composer</option>
-    <% elsif @artist.type == 'DJ/Producer' %>
-    <option value="Band">Band</option>
-    <option value="Solo Artist">Solo Artist</option>
-    <option value="DJ/Producer" selected>DJ/Producer</option>
-    <option value="Composer">Composer</option>
-    <% elsif @artist.type == 'Composer' %>
-    <option value="Band">Band</option>
-    <option value="Solo Artist">Solo Artist</option>
-    <option value="DJ/Producer">DJ/Producer</option>
-    <option value="Composer" selected>Composer</option>
-    <% end %>
+    <option value="Band" <%= "selected" if @artist.type == 'Band' %>>Band</option>
+    <option value="Solo Artist" <%= "selected" if @artist.type == 'Solo Artist' %>>Solo Artist</option>
+    <option value="DJ/Producer" <%= "selected" if @artist.type == 'DJ/Producer' %>>DJ/Producer</option>
+    <option value="Composer" <%= "selected" if @artist.type == 'Composer' %>>Composer</option>
   </select>
 
+  <label for="artist-photo">Photo URL:</label>
+  <input type="text" name="photo" value="<%= @artist.photo() %>">
+
+  <label for="artist-link">Link:</label>
+  <input type="text" name="link" value="<%= @artist.link %>">
 
   <input class="form_button" type="submit" value="Save Changes">
 

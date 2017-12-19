@@ -1,6 +1,9 @@
 <div class="lists_container">
-<p><%= @artist.name %><p>
-<p><%= @artist.type %></p>
+  <p><%= @artist.name %><p>
+<img src="<%= @artist.photo() %>" alt="<%= @artist.name() %>">
+<p>Type: <%= @artist.type %></p>
+<p><a target="_blank" href="<%= @artist.link %>">More information</a> </p>
+
 <p><a href="/artists/<%= @artist.id %>/albums">Albums: (<%= @artist.find_albums.count() %>)</a></p>
 
 <table>
