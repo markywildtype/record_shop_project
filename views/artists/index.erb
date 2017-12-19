@@ -5,9 +5,8 @@
 
 
 <div class="lists_container"
-<p><%= artist.name %> <button type="button" name="artist-details"><a href="/artists/<%= artist.id %>">Details</a></button>
-  Albums: <%= artist.find_albums.count() %>
-  <button type="button" name="album-details"><a href="/artists/<%= artist.id %>/albums">Details</a></button>
+<p><a href="/artists/<%= artist.id %>"><%= artist.name %></a> ||
+  <a href="/artists/<%= artist.id %>/albums">Albums: (<%= artist.find_albums.count() %>)</a>
 </p>
 <table>
   <tr>
