@@ -1,6 +1,6 @@
 <h3>Add stock:</h3>
 
-<form class="" action="/albums" method="post">
+<form class="" action=<% @albums.each do |album| %> "/albums/<%= album.id %>" <% end %> method="post">
 
   <div class="form_wrapper">
 

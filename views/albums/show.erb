@@ -9,7 +9,7 @@
 <p>Potential Profit: £<%= @album.stock_profit() %></p>
 <button type="button" name="edit-album"> <a href="/albums/<%= @album.id %>/edit">Edit Album</a> </button>
 <form class="" action="/albums/<%= @album.id() %>/delete" method="POST">
-  <input class="form_button" type="submit" name="" value="Delete Album">
+  <input class="delete_button" type="submit" name="" value="Delete Album">
 </form>
 <hr/>
 <p><a href="/albums">Back to Albums</a> </p>

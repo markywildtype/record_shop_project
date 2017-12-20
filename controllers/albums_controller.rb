@@ -18,13 +18,16 @@ post('/albums') do
   redirect to '/albums'
 end
 
-get('albums/stock') do
+get('/albums/add_stock') do
+  @albums = Album.all()
   erb(:"albums/stock")
 end
 
-post('albums/:id') do
-  album = Album.new(params)
-  album.add_stock(params['stock'])
+post('/albums/add_stock') do
+  album = Album.find(params['select'].to_i)
+  album.add_stock(params['stock'].to_i)
+  album.update
+  redirect to "/albums/#{params['select'].to_i}"
 end
 
 get('/albums/:id') do

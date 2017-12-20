@@ -1,20 +1,22 @@
 <h3>Add stock:</h3>
 
-<form class="" action="/albums" method="post">
+<form class="" action="/albums/add_stock"  method="POST">
 
   <div class="form_wrapper">
 
-  <label for="album-select"></label>
-  <select id="album-select" class="" name="">
-    <% @albums.each do |album| %>
-    <option value="<%= album.title() %>"><%= album.find_artist['name'] %> - <%= album.title() %></option>
-    <% end %>
-  </select>
+    <label for="album-select"></label>
+    <select id="album-select" name="select" class="" name= "">
+      <% @albums.each do |album| %>
+      <option name="select" value="<%= album.id() %>"><%= album.find_artist['name'] %> - <%= album.title() %></option>
+      <% end %>
+    </select>
 
-  <label for="add-stock">Add Stock:</label>
-  <input id="add-stock" type="number" min="0" name="stock" value="">
 
-</div>
+    <label for="add-stock">Add Stock:</label>
+    <input id="add-stock" type="number" min="0" name="stock" value="">
+
+
+  </div>
 
   <input class="form_button" type="submit" name="" value="Add Stock">
 

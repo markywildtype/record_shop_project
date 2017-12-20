@@ -43,8 +43,7 @@ class Album
   end
 
   def add_stock(copies)
-    @stock = @stock += copies
-    # update()
+    @stock += copies
   end
 
   def delete()
