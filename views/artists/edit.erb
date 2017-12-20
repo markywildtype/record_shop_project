@@ -1,30 +1,33 @@
 <form action="/artists/<%= @artist.id() %>" method="POST">
 
-<h3>Edit Artist Details</h3>
+  <h3>Edit Artist Details</h3>
+  <div class="form_wrapper">
 
-  <label for="artist-name">Name: </label>
-  <input id="artist-name" type="text" name="name" value="<%= @artist.name() %>">
+    <label for="artist-name">Name: </label>
+    <input id="artist-name" type="text" name="name" value="<%= @artist.name() %>">
 
-  <label for="artist-type">Artist Type: </label>
-  <select id="artist-type" name="type">
-    <option value="Band" <%= "selected" if @artist.type == 'Band' %>>Band</option>
-    <option value="Solo Artist" <%= "selected" if @artist.type == 'Solo Artist' %>>Solo Artist</option>
-    <option value="DJ/Producer" <%= "selected" if @artist.type == 'DJ/Producer' %>>DJ/Producer</option>
-    <option value="Composer" <%= "selected" if @artist.type == 'Composer' %>>Composer</option>
-  </select>
+    <label for="artist-type">Artist Type: </label>
+    <select id="artist-type" name="type">
+      <option value="Band" <%= "selected" if @artist.type == 'Band' %>>Band</option>
+      <option value="Solo Artist" <%= "selected" if @artist.type == 'Solo Artist' %>>Solo Artist</option>
+      <option value="DJ/Producer" <%= "selected" if @artist.type == 'DJ/Producer' %>>DJ/Producer</option>
+      <option value="Composer" <%= "selected" if @artist.type == 'Composer' %>>Composer</option>
+    </select>
 
-  <label for="artist-genre">Genre: </label>
-  <select id="artist-genre" class="" name="genre">
-    <% @genres.each do |genre| %>
-    <option value="<%= genre %>" <%= "selected" if @artist.genre() == genre %>><%= genre %></option>
-    <% end %>
-  </select>
+    <label for="artist-genre">Genre: </label>
+    <select id="artist-genre" class="" name="genre">
+      <% @genres.each do |genre| %>
+      <option value="<%= genre %>" <%= "selected" if @artist.genre() == genre %>><%= genre %></option>
+      <% end %>
+    </select>
 
-  <label for="artist-photo">Photo URL:</label>
-  <input id="artist-photo" type="text" name="photo" value="<%= @artist.photo() %>">
+    <label for="artist-photo">Photo URL:</label>
+    <input id="artist-photo" type="text" name="photo" value="<%= @artist.photo() %>">
 
-  <label for="artist-link">Link URL:</label>
-  <input id="artist-link" type="text" name="link" value="<%= @artist.link %>">
+    <label for="artist-link">Link URL:</label>
+    <input id="artist-link" type="text" name="link" value="<%= @artist.link %>">
+
+  </div>
 
   <input class="form_button" type="submit" value="Save Changes">
 

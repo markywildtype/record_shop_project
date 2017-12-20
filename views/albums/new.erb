@@ -1,29 +1,32 @@
 <form class="" action="/albums" method="POST">
+  <div class="form_wrapper">
 
-  <label for="artist-name">Artist: </label>
-  <select id="artist-name" name="artist_id">
-    <% for artist in @artists %>
-    <option value= <%= artist.id() %>><%= artist.name() %></option>
-    <% end %>
-  </select>
+    <label for="artist-name">Artist: </label>
+    <select id="artist-name" name="artist_id">
+      <% for artist in @artists %>
+      <option value=<%= artist.id() %>><%= artist.name() %></option>
+      <% end %>
+    </select>
 
-  <label for="album-title">Album Title: </label>
-  <input id="album-title" type="text" name="title">
+    <label for="album-title">Album Title: </label>
+    <input id="album-title" type="text" name="title">
 
-  <label for="release-date">Release Date (YYYY-MM-DD): </label>
-  <input id="release-date" type="text" name="release_date">
+    <label for="release-date">Release Date (YYYY-MM-DD): </label>
+    <input id="release-date" type="text" name="release_date">
 
-  <label for="stock-level">Stock: </label>
-  <input id="stock-level" type="number" min="0" name="stock">
+    <label for="stock-level">Stock: </label>
+    <input id="stock-level" type="number" min="0" name="stock">
 
-  <label for="unit-price">Unit Price:</label>
-  <input id="unit-price" type="number" step="any" min="0" name="unit_price">
+    <label for="unit-price">Unit Price:</label>
+    <input id="unit-price" type="number" step="any" min="0" name="unit_price">
 
-  <label for="sale_price">Sale Price:</label>
-  <input id="sale_price" type="number" step="any" min="0" name="sale_price">
+    <label for="sale_price">Sale Price:</label>
+    <input id="sale_price" type="number" step="any" min="0" name="sale_price">
 
-  <label for="album-cover">Album Cover URL: </label>
-  <input id="album-cover" type="text" name="album_cover">
+    <label for="album-cover">Album Cover URL: </label>
+    <input id="album-cover" type="text" name="album_cover">
+
+  </div>
 
   <input class="form_button" type="submit" value="Add Album">
 
