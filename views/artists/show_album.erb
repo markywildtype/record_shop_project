@@ -14,7 +14,7 @@
     <td colspan="3">Stock level: <%= album.stock %></td>
   </tr>
   <tr>
-    <td colspan="3">Unit Price: £<%= album.unit_price %></td>
+    <td colspan="3">Unit Price/Sale Price: £<%= album.unit_price %>/£<%= album.sale_price() %></td>
   </tr>
   <tr>
     <td>  <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Edit Album</a></button></td>
