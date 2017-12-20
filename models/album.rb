@@ -47,6 +47,12 @@ class Album
   end
 
   def sell_stock(copies)
+    # if copies <= @stock
+    #   @stock -= copies
+    # else
+    #   alert "Not got that much in stock!"
+    #   return @stock
+    # end
     @stock -= copies
   end
 
