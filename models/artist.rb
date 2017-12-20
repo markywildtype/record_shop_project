@@ -1,24 +1,26 @@
 require_relative('../db/sql_runner.rb')
 require_relative('album.rb')
+require_relative('genre.rb')
 
 class Artist
 
   attr_reader :id
-  attr_accessor :name, :type, :photo, :link
+  attr_accessor :name, :type, :genre, :photo, :link
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
+    @type = options['genre']
     @photo = options['photo']
     @link = options['link']
   end
 
   def save()
-    sql = 'INSERT INTO artists (name, type, photo, link)
-    VALUES ($1, $2, $3, $4)
+    sql = 'INSERT INTO artists (name, type, genre, photo, link)
+    VALUES ($1, $2, $3, $4, $5)
     RETURNING *;'
-    values = [@name, @type, @photo, @link]
+    values = [@name, @type, @genre, @photo, @link]
     saved_artist = SqlRunner.run(sql, values)
     @id = saved_artist[0]['id'].to_i
   end
@@ -32,10 +34,10 @@ class Artist
   end
 
   def update()
-    sql = 'UPDATE artists SET (name, type, photo, link)
-    = ($1, $2, $3, $4)
-    WHERE id = $5;'
-    values = [@name, @type, @photo, @link, @id]
+    sql = 'UPDATE artists SET (name, type, genre, photo, link)
+    = ($1, $2, $3, $4, $5)
+    WHERE id = $6;'
+    values = [@name, @type, @genre, @photo, @link, @id]
     SqlRunner.run(sql, values)
   end
 

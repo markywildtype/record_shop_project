@@ -6,6 +6,7 @@
 <p>Release Date: <%= @album.release_date() %></p>
 <p>Unit Price/Sale Price: £<%= @album.unit_price() %>/£<%= @album.sale_price() %></p>
 <p>Stock: <%= @album.stock %></p>
+<p>Potential Profit: £<%= @album.stock_profit() %></p>
 <button type="button" name="edit-album"> <a href="/albums/<%= @album.id %>/edit">Edit Album</a> </button>
 <form class="" action="/albums/<%= @album.id() %>/delete" method="POST">
   <input class="form_button" type="submit" name="" value="Delete Album">
