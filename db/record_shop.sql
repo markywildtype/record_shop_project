@@ -16,5 +16,6 @@ CREATE TABLE albums (
   release_date DATE,
   stock INT4,
   unit_price DECIMAL(13, 4),
+  sale_price DECIMAL(13, 4),
   album_cover VARCHAR(255)
 );

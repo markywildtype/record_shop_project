@@ -43,6 +43,7 @@ album1 = Album.new({
   'title' => 'Melancholia Hymns',
   'release_date' => '2017-09-15',
   'unit_price' => 8.50,
+  'sale_price' => 10.99,
   'stock' => 15,
   'album_cover' => 'http://bit.ly/2oIlAyw'
   })
@@ -52,6 +53,7 @@ album2 = Album.new({
   'title' => 'Blood and Chemistry',
   'release_date' => '2013-05-06',
   'unit_price' => 8.50,
+  'sale_price' => 9.99,
   'stock' => 10,
   'album_cover' => 'http://bit.ly/2CCncw3'
   })
@@ -61,6 +63,7 @@ album3 = Album.new({
   'title' => 'Statues',
   'release_date' => '2016-04-08',
   'unit_price' => 7.50,
+  'sale_price' => 11.99,
   'stock' => 12,
   'album_cover' => 'http://bit.ly/2D5pnJu'
   })
@@ -69,7 +72,8 @@ album4 = Album.new({
   'artist_id' => artist3.id(),
   'title' => 'Under Mountains',
   'release_date' => '2012-09-12',
-  'unit_price' => 5.99,
+  'unit_price' => 5.51,
+  'sale_price' => 8.99,
   'stock' => 5,
   'album_cover' => 'http://bit.ly/2AY3JW1'
   })
@@ -78,7 +82,8 @@ album5 = Album.new({
   'artist_id' => artist3.id(),
   'title' => 'Tied to the Moon',
   'release_date' => '2015-07-10',
-  'unit_price' => 8.59,
+  'unit_price' => 5.51,
+  'sale_price' => 8.99,
   'stock' => 8,
   'album_cover' => 'http://bit.ly/2D3XpxP'
   })
@@ -88,6 +93,7 @@ album6 = Album.new({
   'title' => 'Masterpiece',
   'release_date' => '2016-05-27',
   'unit_price' => 6.55,
+  'sale_price' => 12.99,
   'stock' => 2,
   'album_cover' => 'http://bit.ly/2BLTFmQ'
   })

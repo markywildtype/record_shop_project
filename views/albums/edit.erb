@@ -20,7 +20,10 @@
   <input id="album-release-date" type="text" name="release_date" value=<%= @album.release_date() %>>
 
   <label for="album-stock">Stock: </label>
-  <input type="number" name="stock" min="0" value=<%= @album.stock() %>>
+  <input id="album-stock" type="number" name="stock" min="0" value=<%= @album.stock() %>>
+
+  <label for="sale-price">Sale Price: </label>
+  <input id="sale-price" type="number" step="any" name="sale_price" value=<%= @album.sale_price() %>>
 
   <label for="album-cover">Album Cover URL:</label>
   <input id="album-cover" type="text" name="album_cover" value="<%= @album.album_cover() %>">
