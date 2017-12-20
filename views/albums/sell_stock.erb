@@ -1,0 +1,21 @@
+<h3>Sell Stock:</h3>
+<hr/>
+<form class="" action="/albums/sell_stock" method="POST">
+
+  <div class="form_wrapper">
+
+    <label for="album-select"></label>
+    <select id="album-select" class="" name="select">
+      <% @albums.each do |album| %>
+      <option value="<%= album.id %>" name="select"><%= album.find_artist()['name'] %> - <%= album.title() %></option>
+      <% end %>
+    </select>
+
+    <label for="album-stock">Number of Copies Sold:</label>
+    <input type="number" min="0" name="stock" value="">
+
+  </div>
+
+  <input class="form_button" type="submit" name="" value="Update Inventory">
+
+</form>

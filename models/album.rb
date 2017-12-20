@@ -46,6 +46,10 @@ class Album
     @stock += copies
   end
 
+  def sell_stock(copies)
+    @stock -= copies
+  end
+
   def delete()
     sql = 'DELETE FROM albums
     WHERE id = $1;'

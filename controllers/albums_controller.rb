@@ -20,13 +20,25 @@ end
 
 get('/albums/add_stock') do
   @albums = Album.all()
-  erb(:"albums/stock")
+  erb(:"albums/add_stock")
 end
 
 post('/albums/add_stock') do
   album = Album.find(params['select'].to_i)
   album.add_stock(params['stock'].to_i)
   album.update
+  redirect to "/albums/#{params['select'].to_i}"
+end
+
+get('/albums/sell_stock') do
+  @albums = Album.all()
+  erb(:"albums/sell_stock")
+end
+
+post('/albums/sell_stock') do
+  album = Album.find(params['select'].to_i)
+  album.sell_stock(params['stock'].to_i)
+  album.update()
   redirect to "/albums/#{params['select'].to_i}"
 end
 
