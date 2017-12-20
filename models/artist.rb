@@ -11,7 +11,7 @@ class Artist
     @id = options['id'].to_i if options['id']
     @name = options['name']
     @type = options['type']
-    @type = options['genre']
+    @genre = options['genre']
     @photo = options['photo']
     @link = options['link']
   end

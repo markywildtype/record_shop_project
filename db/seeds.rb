@@ -8,6 +8,7 @@ Artist.delete_all()
 artist1 = Artist.new({
   'name' => 'Arcane Roots',
   'type' => 'Band',
+  'genre' => 'Alternative Rock',
   'photo' => 'http://bit.ly/2CFjTUQ',
   'link' => 'https://arcaneroots.com/'
   })
@@ -15,6 +16,7 @@ artist1 = Artist.new({
 artist2 = Artist.new({
   'name' => 'Black Peaks',
   'type' => 'Band',
+  'genre' => 'Alternative Rock',
   'photo' => 'http://bit.ly/2BfqR6V',
   'link' => 'http://www.blackpeaks.com/'
   })
@@ -22,6 +24,7 @@ artist2 = Artist.new({
 artist3 = Artist.new({
   'name' => 'Rachel Sermanni',
   'type' => 'Solo Artist',
+  'genre' => 'Folk',
   'photo' => 'http://bit.ly/2kjRCfA',
   'link' => 'http://rachelsermanni.co.uk/'
   })
@@ -29,6 +32,7 @@ artist3 = Artist.new({
 artist4 = Artist.new({
   'name' => 'Big Thief',
   'type' => 'Band',
+  'genre' => 'Alternative Rock',
   'photo' => 'http://bit.ly/2yWQFi7',
   'link' => 'http://www.bigthief.net/'
   })
