@@ -18,6 +18,15 @@ post('/albums') do
   redirect to '/albums'
 end
 
+get('albums/stock') do
+  erb(:"albums/stock")
+end
+
+post('albums/:id') do
+  album = Album.new(params)
+  album.add_stock(params['stock'])
+end
+
 get('/albums/:id') do
   @album = Album.find(params['id'])
   erb(:"albums/show")

@@ -42,6 +42,11 @@ class Album
     SqlRunner.run(sql, values)
   end
 
+  def add_stock(copies)
+    @stock = @stock += copies
+    # update()
+  end
+
   def delete()
     sql = 'DELETE FROM albums
     WHERE id = $1;'
