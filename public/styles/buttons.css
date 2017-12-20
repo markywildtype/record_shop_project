@@ -22,6 +22,16 @@ button a:hover {
   background-color: white;
   border: 1px gray solid;
 }
+
+.delete_button {
+  padding: 2px;
+  margin: 2px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  background-color: white;
+  border: 1px gray solid;
+}
+
  .form_button:hover {
   box-shadow: 0.5px 0.5px gray;
  }

@@ -29,7 +29,7 @@
         <td> <button type="button" name="Details"><a href="/albums/<%= album.id %>">View Details</a></button></td>
         <td> <button type="button" name="Edit-album"><a href="/albums/<%= album.id %>/edit">Update</a></button></td>
         <td> <form class="" action="/albums/<%= album.id %>/delete" method="POST">
-          <input class="form_button" type="submit" name="" value="Delete Album">
+          <input class="delete_button" type="submit" name="" value="Delete Album">
         </form> </td>
       </tr>
       <% end %>
