@@ -49,6 +49,11 @@ class Album
     SqlRunner.run(sql, values)
   end
 
+  def calculate_profit()
+    profit = @sale_price - @unit_price
+    return profit
+  end
+
   def self.all()
     sql = 'SELECT albums.*, artists.name FROM albums
     INNER JOIN artists
