@@ -2,6 +2,7 @@ require('sinatra')
 require('sinatra/contrib/all')
 require_relative('../models/artist.rb')
 require_relative('../models/album.rb')
+require_relative('../models/genre.rb')
 require('pry-byebug')
 
 get('/artists') do
@@ -10,6 +11,7 @@ get('/artists') do
 end
 
 get('/artists/new') do
+  @genres = Genre.all()
   erb(:"artists/new")
 end
 

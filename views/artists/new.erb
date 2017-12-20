@@ -4,14 +4,19 @@
   <input id="artist-name-input" type="text" name="name" value="">
 
   <label for="artist-type">Artist Type: </label>
-  <select class="" name="type" id="artist-type">
+  <select id="artist-type" class="" name="type" id="artist-type">
     <option value="Band">Band</option>
     <option value="Solo Artist">Solo Artist</option>
     <option value="DJ/Producer">DJ/Producer</option>
     <option value="Composer">Composer</option>
   </select>
 
-  <label for=""></label>
+  <label for="artist-genre">Genre: </label>
+  <select id="artist-genre" class="" name="">
+    <% @genres.each do |genre| %>
+    <option value="<%= genre %>"><%= genre %></option>
+    <% end %>
+  </select>
 
   <label for="artist-photo">Photo URL: </label>
   <input id="artist-photo" type="text" name="photo">
