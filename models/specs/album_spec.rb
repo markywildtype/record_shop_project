@@ -33,10 +33,13 @@ class TestAlbum < Minitest::Test
   end
 
   def test_calculate_profit()
-    expected1 = 10.99 - 8.50
-    expected2 = 8.99 - 5.51
-    assert_equal(expected1, @album1.calculate_profit())
-    assert_equal(expected2, @album2.calculate_profit())
+    assert_equal(2.49, @album1.calculate_profit())
+    assert_equal(3.48, @album2.calculate_profit())
+  end
+
+  def test_stock_profit()
+    assert_equal(37.35, @album1.stock_profit())
+    assert_equal(34.8, @album2.stock_profit())
   end
 
 end

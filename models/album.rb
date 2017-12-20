@@ -51,7 +51,13 @@ class Album
 
   def calculate_profit()
     profit = @sale_price - @unit_price
-    return profit
+    return profit.round(2)
+  end
+
+  def stock_profit()
+    profit = @sale_price - @unit_price
+    total_profit = profit * @stock
+    return total_profit.round(2)
   end
 
   def self.all()
