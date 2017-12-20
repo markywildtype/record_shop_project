@@ -26,6 +26,7 @@ get('/artists/:id') do
 end
 
 get('/artists/:id/edit') do
+  @genres = Genre.all()
   @artist = Artist.find(params['id'])
   erb(:"artists/edit")
 end

@@ -13,6 +13,13 @@
     <option value="Composer" <%= "selected" if @artist.type == 'Composer' %>>Composer</option>
   </select>
 
+  <label for="artist-genre">Genre: </label>
+  <select id="artist-genre" class="" name="genre">
+    <% @genres.each do |genre| %>
+    <option value="<%= genre %>"><%= genre %></option>
+    <% end %>
+  </select>
+
   <label for="artist-photo">Photo URL:</label>
   <input id="artist-photo" type="text" name="photo" value="<%= @artist.photo() %>">
 
