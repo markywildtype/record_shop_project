@@ -17,10 +17,15 @@ button a:hover {
 
 .form_button {
   padding: 2px;
+  /*margin: 2px;*/
   font-size: 0.7rem;
   border-radius: 5px;
   background-color: white;
   border: 1px gray solid;
+}
+
+.form_button:hover {
+  box-shadow: 0.5px 0.5px gray;
 }
 
 .delete_button {
@@ -32,7 +37,7 @@ button a:hover {
   border: 1px gray solid;
 }
 
- .form_button:hover {
+ .delete_button:hover {
   box-shadow: 0.5px 0.5px gray;
  }
 
