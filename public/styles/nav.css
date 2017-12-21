@@ -13,6 +13,7 @@ nav ul {
 }
 
 nav ul li {
+  font-family: 'Permanent Marker', cursive;
   font-size: 1.3rem;
   position: relative;
   margin: -10px;

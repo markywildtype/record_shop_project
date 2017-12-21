@@ -43,7 +43,9 @@ footer {
 }
 
 h3 {
-  margin: 5px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.5rem;
+  margin: 0px 5px 5px 5px;
 }
 
 #container {

@@ -15,7 +15,7 @@
   </tr>
   <tr>
     <td><%= artist_hash['name'] %></td>
-    <td><%= album.title %></td>
+    <td><a href="/albums/<%= album.id %>"><%= album.title %></a></td>
     <td>
       <% if album.stock <= 5 %>
       <p id="low">Low</p>
