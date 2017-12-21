@@ -3,9 +3,12 @@
 <img src="<%= @artist.photo() %>" alt="<%= @artist.name() %>">
 <p>Type: <%= @artist.type() %></p>
 <p>Genre: <%= @artist.genre() %></p>
+<% if @artist.link() == '' %>
+<p></p>
+<% else %>
 <p><a target="_blank" href="<%= @artist.link %>">More information</a> </p>
-
-<p><a href="/artists/<%= @artist.id %>/albums">Albums: (<%= @artist.find_albums.count() %>)</a></p>
+<% end %>
+<p><a href="/artists/<%= @artist.id if @artist.id %>/albums">Albums: (<%= @artist.find_albums.count() %>)</a></p>
 
 <table>
   <tr>
