@@ -6,7 +6,7 @@
 body {
   font-family: 'Merriweather Sans', sans-serif;
   background-color: #fff8d1;
-  /*background-image: url('http://bit.ly/2AYSw7A');*/
+  background-image: url('/images/wood.jpg');
   background-color: rgba(255, 255, 235, 0.8);
   background-size: cover;
 }
