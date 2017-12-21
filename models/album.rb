@@ -57,11 +57,6 @@ class Album
     SqlRunner.run(sql, values)
   end
 
-  def calculate_profit()
-    profit = @sale_price - @unit_price
-    return profit.round(2)
-  end
-
   def stock_profit()
     profit = @sale_price - @unit_price
     total_profit = profit * @stock
