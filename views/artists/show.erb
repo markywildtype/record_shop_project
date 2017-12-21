@@ -12,7 +12,7 @@
   <td><button type="button" name="Add Album"><a href="/albums/new">Add Album</a></button></td>
   <td><button type="button" name="Edit Artist"><a href="/artists/<%= @artist.id() %>/edit">Edit Artist</a></button></td>
   <td><form class="" action="/artists/<%= @artist.id() %>/delete" method="POST">
-    <input class="form_button" type="submit" name="" value="Delete Artist">
+    <input class="delete_button" type="submit" name="" value="Delete Artist">
   </form></td>
 </tr>
 </table>

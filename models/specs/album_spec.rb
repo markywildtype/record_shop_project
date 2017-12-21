@@ -47,4 +47,9 @@ class TestAlbum < Minitest::Test
     assert_equal(15, @album2.add_stock(5))
   end
 
+  def test_sell_stock
+    assert_equal(11, @album1.sell_stock(4))
+    assert_equal(7, @album2.sell_stock(3))
+  end
+
 end
