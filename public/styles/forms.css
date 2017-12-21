@@ -1,18 +1,33 @@
+.form_wrapper{
+  font-family: 'Merriweather Sans', sans-serif;
+  margin-bottom: 15px;
+}
+
 form input, label {
   display: block;
   margin: 8px;
 }
 
 form input {
+  font-family: 'Merriweather Sans', sans-serif;
   padding:2px;
   font-size: 0.9rem;
 }
 
 select {
+  font-family: 'Merriweather Sans', sans-serif;
   margin-left: 10px;
   font-size: 0.9rem;
 }
 
 select option {
   padding: 3px;
+}
+
+#release-date {
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+#album-release-date {
+  font-family: 'Merriweather Sans', sans-serif;
 }
